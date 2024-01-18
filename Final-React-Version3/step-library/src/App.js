@@ -18,6 +18,8 @@ const App = () => {
       <div className="App">
         <Routes>
           {/* Teacher Pages */}
+          {/* Teacher Pages */}
+
           <Route path="/" element={<LoginTeacher />} />
           <Route path="/LoginTeacher" element={<LoginTeacher />} />
           <Route path="/Homepage" element={<HomepageComponent />} />
