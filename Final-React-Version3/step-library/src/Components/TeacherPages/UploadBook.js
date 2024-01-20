@@ -7,8 +7,6 @@ import { NavLink } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 
-
-
 const UploadBookComponent = () => {
 
     const [show, setShow] = useState(false);

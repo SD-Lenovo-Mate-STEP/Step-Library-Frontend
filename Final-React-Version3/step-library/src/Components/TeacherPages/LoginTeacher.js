@@ -14,56 +14,39 @@ const LoginTeacher = () => {
 
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
+    async function handleLogin(e){
         e.preventDefault();
-
+    
         if (data.username.length > 0 && data.password.length > 0) {
-            try {
-                const response = await fetch('http://172.104.166.110/api/FT_SD_A_3/login.php', {
-                    method: 'POST',
-                    body: JSON.stringify(data),
+          try {
+            fetch(`https://localhost:44388/api/Users/${data.username}/${data.password}/login`,{
+              method: 'POST'
+            }).then((resp) => resp.json()).then((data) => {
+              // console.log(data, " Fetch Successfully");
+              if(data.role === "Teacher"){
+                Swal.fire({
+                  title: 'Login Successful',
+                  text: 'Login Successfully.',
+                  icon: 'success',
                 });
-
-                if (response.ok) {
-                    const responseData = await response.json();
-                    if (responseData.status === 'SUCCESS') {
-                        console.log(responseData);
-                        Swal.fire({
-                            title: 'Login Successful',
-                            text: 'You have successfully logged in.',
-                            icon: 'success',
-                        });
-                        navigate('/Homepage', {
-                            state: {
-                                username: data.username,
-                                teacher_token: responseData.token, // You may need to adjust this based on your backend response
-                            },
-                        });
-                    } else if (responseData.status === 'USER_NOT_FOUND') {
-                        Swal.fire({
-                            title: 'Login Failed',
-                            text: 'User not found. Please check your username and try again.',
-                            icon: 'error',
-                        });
-                    } else {
-                        Swal.fire({
-                            title: 'Login Failed',
-                            text: 'Invalid username or password. Please check your login details again.',
-                            icon: 'error',
-                        });
-                    }
-                } else {
-                    throw new Error(response.statusText);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                setErrorMessage('An error occurred.');
-            }
+                navigate('/Homepage');
+              }else{
+                Swal.fire({
+                  title: 'Login Failed',
+                  text: data.Error,
+                  icon: 'error',
+                });
+              }
+            } )
+          } catch (error) {
+            console.error('Error:', error);
+            setErrorMessage('An error occurred.');
+          }
         } else {
-            setWhenFieldsNotInput('border border-danger');
-            setErrorMessage('Invalid fields');
+          setWhenFieldsNotInput('border border-danger');
+          setErrorMessage('Invalid fields');
         }
-    };
+      };
 
     return (
         <div className='App'>

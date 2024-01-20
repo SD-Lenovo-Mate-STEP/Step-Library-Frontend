@@ -20,48 +20,30 @@ const LoginLibrarianComponent = () => {
 
 
 
-  const handleLogin = async (e) => {
+  async function handleLogin(e){
     e.preventDefault();
 
     if (data.username.length > 0 && data.password.length > 0) {
       try {
-        const response = await fetch('http://172.104.166.110/api/FT_SD_A_3/login.php', {
-          method: 'POST',
-          body: JSON.stringify(data),
-        });
-
-
-        if (response.ok) {
-          const responseData = await response.json();
-          if (responseData.status === 'SUCCESS') {
-            console.log(responseData);
+        fetch(`https://localhost:44388/api/Librarians/${data.username}/${data.password}/login`,{
+          method: 'POST'
+        }).then((resp) => resp.json()).then((data) => {
+          // console.log(data, " Fetch Successfully");
+          if(data.role === "Librarian"){
             Swal.fire({
               title: 'Login Successful',
-              text: 'You have successfully logged in.',
+              text: 'Login Successfully.',
               icon: 'success',
             });
-            navigate('/homepage', {
-              state: {
-                username: data.username,
-                student_token: responseData.token,
-              },
-            });
-          } else if (responseData.status === 'USER_NOT_FOUND') {
+            navigate('/LibrarianHomepage');
+          }else{
             Swal.fire({
               title: 'Login Failed',
-              text: 'User not found. Please check your username and try again.',
-              icon: 'error',
-            });
-          } else {
-            Swal.fire({
-              title: 'Login Failed',
-              text: 'Invalid username or password. Please check your login details again.',
+              text: data.Error,
               icon: 'error',
             });
           }
-        } else {
-          throw new Error(response.statusText);
-        }
+        } )
       } catch (error) {
         console.error('Error:', error);
         setErrorMessage('An error occurred.');

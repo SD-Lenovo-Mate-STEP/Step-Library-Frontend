@@ -22,7 +22,7 @@ const App = () => {
           {/* Teacher Pages */}
         
 
-          <Route path="/" element={<LoginTeacher />} />
+          {/* <Route path="/" element={<LoginTeacher />} /> */}
           <Route path="/LoginTeacher" element={<LoginTeacher />} />
           <Route path="/Homepage" element={<HomepageComponent />} />
           <Route path="/UploadBook" element={<UploadBookComponent />} />
@@ -30,6 +30,8 @@ const App = () => {
           <Route path="/EbookManagement" element={<EbookManageComponent />} />
 
           {/* Librarian Pages */}
+          <Route path="/" element={<LoginLibrarianComponent />} />
+
           <Route path="/LoginLibrarian" element={<LoginLibrarianComponent />} />
           <Route path="/Signup" element={<SignupComponent />} />
           <Route path="/LibrarianHomepage" element={<LibrarianHomepageComponent />} />
