@@ -192,21 +192,21 @@ const CreateTeacherComponent = () => {
                     <div className="nav-container">
                         {/* Logo and Home link */}
                         <NavLink exact to="/" className="nav-logo">
-          <NavLink exact to="/LibrarianHomepage" className="nav-logo">
-    <img
-        src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
-        alt="logo"
-        width="50"
-        style={{
-            padding: '1px',
-            marginTop: '16px',
-            width: '100px',
-            height: '220px',
-        }}
-    />
-</NavLink>
+                            <NavLink exact to="/LibrarianHomepage" className="nav-logo">
+                                <img
+                                    src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
+                                    alt="logo"
+                                    width="50"
+                                    style={{
+                                        padding: '1px',
+                                        marginTop: '10px',
+                                        width: '100px',
+                                        height: '220px',
+                                    }}
+                                />
+                            </NavLink>
 
-          </NavLink>
+                        </NavLink>
 
                         {/* Navigation links */}
                         <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -243,7 +243,7 @@ const CreateTeacherComponent = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/manage-studentgroup"
+                                    to="/ManageStudentGroup"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
@@ -253,7 +253,7 @@ const CreateTeacherComponent = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/manage-groups"
+                                    to="/ManagementGroups"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
@@ -263,7 +263,7 @@ const CreateTeacherComponent = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/reset-password"
+                                    to="/Resetpassword"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
@@ -272,17 +272,17 @@ const CreateTeacherComponent = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                  <NavLink
-  
-                      to="/LoginLibrarian"
-                      activeclassName="active"
-                      className="nav-links"
-                      onClick={handleClick}
-  
-                  >
-                      Log out
-                  </NavLink>
-              </li>
+                                <NavLink
+
+                                    to="/LoginLibrarian"
+                                    activeclassName="active"
+                                    className="nav-links"
+                                    onClick={handleClick}
+
+                                >
+                                    Log out
+                                </NavLink>
+                            </li>
                             {/* Add more navigation items as needed */}
                         </ul>
 
@@ -319,59 +319,59 @@ const CreateTeacherComponent = () => {
                             </div>
                         </div>
                         <div className="row">
-                          
+
                             <div className="table-responsive" style={{ fontFamily: "Allerta Stencil" }}>
-                                
-                            <div className="scrollable-table"> 
 
-                           
-                                <Table striped bordered hover responsive className="mt-4 text-center">
-                                    {/* Your table header remains unchanged */}
-                                    <thead>
-                                        <tr>
-                                            <th>Teacher ID</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                            <th>Assign Group</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Yeow</td>
-                                            <td>********</td>
-                                            <td>
-                                                {/* Dropdown for Assign Teacher */}
-                                                <Form.Select>
-                                                    <option>Choose group...</option>
-                                                    {/* Add options dynamically based on your data or static values */}
-                                                    <option value="FT SD E3">FT-SD-E3</option>
-                                                    <option value="FT SD M2">FT-SD-M2</option>
-                                                    {/* Add more options as needed */}
-                                                </Form.Select>
-                                            </td>
-                                            <td>
-                                            <Button variant="success" className="me-2">
-                                                    Add
-                                                </Button>
-                                                {/* View button */}
-                                                <Button variant="primary" className="me-2">
-                                                    View
-                                                </Button>
-                                                <Button variant="danger">
-                                                    Delete
-                                                </Button>
-                                                <Button variant="success" className="ms-2">
-                                                    Edit
-                                                </Button>
-                                            </td>
-                                        </tr>
-                                        {/* Add more rows based on your actual data */}
-                                    </tbody>
+                                <div className="scrollable-table">
 
-                                </Table>
-                            </div>
+
+                                    <Table striped bordered hover responsive className="mt-4 text-center">
+                                        {/* Your table header remains unchanged */}
+                                        <thead>
+                                            <tr>
+                                                <th>Teacher ID</th>
+                                                <th>Username</th>
+                                                <th>Password</th>
+                                                <th>Assign Group</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Yeow</td>
+                                                <td>********</td>
+                                                <td>
+                                                    {/* Dropdown for Assign Teacher */}
+                                                    <Form.Select>
+                                                        <option>Choose group...</option>
+                                                        {/* Add options dynamically based on your data or static values */}
+                                                        <option value="FT SD E3">FT-SD-E3</option>
+                                                        <option value="FT SD M2">FT-SD-M2</option>
+                                                        {/* Add more options as needed */}
+                                                    </Form.Select>
+                                                </td>
+                                                <td>
+                                                    <Button variant="success" className="me-2">
+                                                        Add
+                                                    </Button>
+                                                    {/* View button */}
+                                                    <Button variant="primary" className="me-2">
+                                                        View
+                                                    </Button>
+                                                    <Button variant="danger">
+                                                        Delete
+                                                    </Button>
+                                                    <Button variant="success" className="ms-2">
+                                                        Edit
+                                                    </Button>
+                                                </td>
+                                            </tr>
+                                            {/* Add more rows based on your actual data */}
+                                        </tbody>
+
+                                    </Table>
+                                </div>
                             </div>
                         </div>
 

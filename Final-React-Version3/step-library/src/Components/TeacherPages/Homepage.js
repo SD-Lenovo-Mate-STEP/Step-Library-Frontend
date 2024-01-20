@@ -6,120 +6,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Nav, Navbar } from 'react-bootstrap';
 
 const HomepageComponent = () => {
-//     return (
-//         <div className="App fade-in" style={styles.container}>
-//             <style>
-//                 {`
-//                     body {
-//                         font-family: 'Allerta Stencil', sans-serif;
-//                         margin: 0;
-//                         padding: 0;
-//                         background: linear-gradient(to right, #33b5e5, #87CEEB);
-//                         overflow: hidden;
-//                         height: 100vh;
-//                     }
 
-//                     .fade-in {
-//                         animation: fadeIn 1s ease-in-out;
-//                     }
-
-//                     @keyframes fadeIn {
-//                         from {
-//                             opacity: 0;
-//                         }
-//                         to {
-//                             opacity: 1;
-//                         }
-//                     }
-
-                 
-//                         .dashboard-content {
-//                             background-color: #fff;
-//                             padding: 20px;
-//                             border-radius: 10px;
-//                             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//                             width: 80%;
-//                             margin: 0 auto;
-//                             margin-top: 50px;
-//                             display: flex;
-//                             flex-direction: column;
-//                             align-items: center;
-//                             justify-content: center;
-//                             text-align: center;
-//                         }
-//                         .dashboard-content img {
-//                             max-width: 100%;
-//                             height: auto;
-//                         }
-                        
-
-//                     .nav-link {
-//                         color: white !important;
-//                     }
-//                 `}
-//             </style>
-
-//             <Navbar style={styles.navbar} variant="dark" sticky="top" expand="sm" collapseOnSelect>
-//                 <Navbar.Brand>
-//                     <img
-//                         src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
-//                         alt="logo"
-//                         width="50"
-//                         style={styles.logo}
-//                     />
-//                 </Navbar.Brand>
-//                 <Navbar.Toggle className="coloring" />
-//                 <Navbar.Collapse style={{ padding: "20px" }}>
-//                     <Nav className="me-auto" style={{ fontFamily: "Allerta Stencil", color: "white" }}>
-//                         <Link to="/UploadBook" className="nav-link" style={{ color: 'white' }}>
-//                             Upload Book
-//                         </Link>
-//                         <Link to="/ViewGroups" className="nav-link" style={{ color: 'white' }}>
-//                             View Groups
-//                         </Link>
-//                         <Link to="/EbookManagement" className="nav-link" style={{ color: 'white' }}>
-//                             Assign Ebooks
-//                         </Link>
-//                     </Nav>
-//                     <Nav>
-//                        <Link to='/LoginTeacher' className="nav-link" style={{ color: 'white' }}>
-//                             Log out
-//                         </Link>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Navbar>
-
-//             <div className="dashboard-content">
-//                 {/* Your dashboard content goes here */}
-//                 <h2 style={styles.heading}>Welcome To Librarian</h2>
-//                 <img src="https://i.giphy.com/media/Olb8GJy5cw17G/giphy.gif" alt="banana" ></img>
-//             </div>
-//         </div>
-//     );
-// }
-
-// const styles = {
-//     container: {
-//         height: '100vh',
-//         overflow: 'hidden',
-//     },
-//     navbar: {
-//         backgroundColor: '#33b5e5',
-//     },
-//     logo: {
-//         borderRadius: '60%',
-//         border: '2px solid #fff',
-//         padding: '1px',
-//         margin: '0px 20px 0px 15px',
-//         size: '20px',
-//     },
-//     heading: {
-//         color: '#33b5e5',
-//         textAlign: 'center',
-//         marginBottom: '20px',
-//     },
-
-// };
 const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -326,7 +213,7 @@ const [click, setClick] = useState(false);
         width="50"
         style={{
             padding: '1px',
-            marginTop: '16px',
+            marginTop: '10px',
             width: '100px',
             height: '220px',
         }}

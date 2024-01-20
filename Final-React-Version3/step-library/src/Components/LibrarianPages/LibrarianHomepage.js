@@ -203,19 +203,19 @@ function LibrarianHomepageComponent() {
         <div className="nav-container">
           {/* Logo and Home link */}
           <NavLink exact to="/" className="nav-logo">
-          <NavLink exact to="/LibrarianHomepage" className="nav-logo">
-    <img
-        src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
-        alt="logo"
-        width="50"
-        style={{
-            padding: '1px',
-            marginTop: '16px',
-            width: '100px',
-            height: '220px',
-        }}
-    />
-</NavLink>
+            <NavLink exact to="/LibrarianHomepage" className="nav-logo">
+              <img
+                src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
+                alt="logo"
+                width="50"
+                style={{
+                  padding: '1px',
+                  marginTop: '10px',
+                  width: '100px',
+                  height: '220px',
+                }}
+              />
+            </NavLink>
 
           </NavLink>
 
@@ -254,7 +254,7 @@ function LibrarianHomepageComponent() {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/manage-studentgroup"
+                to="/ManageStudentGroup"
                 activeclassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -264,7 +264,7 @@ function LibrarianHomepageComponent() {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/manage-groups"
+                to="/ManagementGroups"
                 activeclassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -274,7 +274,7 @@ function LibrarianHomepageComponent() {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/reset-password"
+                to="/Resetpassword"
                 activeclassName="active"
                 className="nav-links"
                 onClick={handleClick}
@@ -283,17 +283,17 @@ function LibrarianHomepageComponent() {
               </NavLink>
             </li>
             <li className="nav-item">
-                  <NavLink
-  
-                      to="/LoginLibrarian"
-                      activeclassName="active"
-                      className="nav-links"
-                      onClick={handleClick}
-  
-                  >
-                      Log out
-                  </NavLink>
-              </li>
+              <NavLink
+
+                to="/LoginLibrarian"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+
+              >
+                Log out
+              </NavLink>
+            </li>
             {/* Add more navigation items as needed */}
           </ul>
 
@@ -312,33 +312,33 @@ function LibrarianHomepageComponent() {
         </div>
       </nav>
       <div className="dashboard-content">
-                {/* Your dashboard content goes here */}
-                <h2 style={styles.heading}>Welcome To Librarian Dashboard</h2>
-                <img src="https://i.giphy.com/media/Olb8GJy5cw17G/giphy.gif" alt="banana" ></img>
-            </div>
+        {/* Your dashboard content goes here */}
+        <h2 style={styles.heading}>Welcome To Librarian Dashboard</h2>
+        <img src="https://i.giphy.com/media/Olb8GJy5cw17G/giphy.gif" alt="banana" ></img>
+      </div>
 
     </div>
   );
 }
 const styles = {
   container: {
-      height: '100vh',
-      overflow: 'hidden',
+    height: '100vh',
+    overflow: 'hidden',
   },
   navbar: {
-      backgroundColor: '#33b5e5',
+    backgroundColor: '#33b5e5',
   },
   logo: {
-      borderRadius: '60%',
-      border: '2px solid #fff',
-      padding: '1px',
-      margin: '0px 20px 0px 15px',
-      size: '20px',
+    borderRadius: '60%',
+    border: '2px solid #fff',
+    padding: '1px',
+    margin: '0px 20px 0px 15px',
+    size: '20px',
   },
   heading: {
-      color: '#33b5e5',
-      textAlign: 'center',
-      marginBottom: '20px',
+    color: '#33b5e5',
+    textAlign: 'center',
+    marginBottom: '20px',
   },
 
 };

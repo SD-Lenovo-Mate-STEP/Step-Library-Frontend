@@ -239,7 +239,7 @@ const UploadBookComponent = () => {
         width="50"
         style={{
             padding: '1px',
-            marginTop: '16px',
+            marginTop: '10px',
             width: '100px',
             height: '220px',
         }}

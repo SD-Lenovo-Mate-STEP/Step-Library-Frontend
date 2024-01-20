@@ -6,24 +6,24 @@ import { NavLink } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 const ManageGroupComponent = () => {
-    const [show, setShow] = useState(false);
-    const [teacherGroups, setTeacherGroups] = useState([
-        { id: 1, name: 'FT-SD-A3', numberOfStudents: 25 },
-        // Add more default groups as needed
-    ]); // Placeholder data for teacher's groups
+  const [show, setShow] = useState(false);
+  const [teacherGroups, setTeacherGroups] = useState([
+    { id: 1, name: 'FT-SD-A3', numberOfStudents: 25 },
+    // Add more default groups as needed
+  ]); // Placeholder data for teacher's groups
 
-    const [filterValue, setFilterValue] = useState('');
-    // Function to handle modal close
-    const handleClose = () => setShow(false);
+  const [filterValue, setFilterValue] = useState('');
+  // Function to handle modal close
+  const handleClose = () => setShow(false);
 
-    const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
 
-    return (
-        <div className='App'>
-        <style>
-          {`
+  return (
+    <div className='App'>
+      <style>
+        {`
   
                   body {
                       background-color: #e3f2fd;
@@ -210,30 +210,30 @@ const ManageGroupComponent = () => {
                           height: auto;
                       }
                `}
-        </style>
-        <nav className="navbar">
-          <div className="nav-container">
-            {/* Logo and Home link */}
-            <NavLink exact to="/" className="nav-logo">
+      </style>
+      <nav className="navbar">
+        <div className="nav-container">
+          {/* Logo and Home link */}
+          <NavLink exact to="/" className="nav-logo">
             <NavLink exact to="/Homepage" className="nav-logo">
-    <img
-        src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
-        alt="logo"
-        width="50"
-        style={{
-            padding: '1px',
-            marginTop: '16px',
-            width: '100px',
-            height: '220px',
-        }}
-    />
-</NavLink>
-
-  
+              <img
+                src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
+                alt="logo"
+                width="50"
+                style={{
+                  padding: '1px',
+                  marginTop: '10px',
+                  width: '100px',
+                  height: '220px',
+                }}
+              />
             </NavLink>
-  
-            {/* Navigation links */}
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
+
+
+          </NavLink>
+
+          {/* Navigation links */}
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
                 exact
@@ -245,179 +245,179 @@ const ManageGroupComponent = () => {
                 Homepage
               </NavLink>
             </li>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/UploadBook"
-                  activeclassName="active"
-                  className="nav-links"
-                  onClick={handleClick}
-                >
-                  Upload Book
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/ViewGroups"
-                  activeclassName="active"
-                  className="nav-links"
-                  onClick={handleClick}
-                >
-                  View Groups
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/EbookManagement"
-                  activeclassName="active"
-                  className="nav-links"
-                  onClick={handleClick}
-                >
-                  Assign Ebooks
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                  <NavLink
-  
-                      to="/LoginTeacher"
-                      activeclassName="active"
-                      className="nav-links"
-                      onClick={handleClick}
-  
-                  >
-                      Log out
-                  </NavLink>
-              </li>
-              {/* Add more navigation items as needed */}
-            </ul>
-  
-            {/* Hamburger icon for mobile */}
-            <div className="nav-icon" onClick={handleClick}>
-              {click ? (
-                <span className="icon">
-                  <HamburgetMenuOpen />{" "}
-                </span>
-              ) : (
-                <span className="icon">
-                  <HamburgetMenuClose />
-                </span>
-              )}
-            </div>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/UploadBook"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Upload Book
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/ViewGroups"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                View Groups
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/EbookManagement"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Assign Ebooks
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+
+                to="/LoginTeacher"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+
+              >
+                Log out
+              </NavLink>
+            </li>
+            {/* Add more navigation items as needed */}
+          </ul>
+
+          {/* Hamburger icon for mobile */}
+          <div className="nav-icon" onClick={handleClick}>
+            {click ? (
+              <span className="icon">
+                <HamburgetMenuOpen />{" "}
+              </span>
+            ) : (
+              <span className="icon">
+                <HamburgetMenuClose />
+              </span>
+            )}
           </div>
-        </nav>
-            <div className="container">
-                <div className="crud shadow-lg p-3 mb-5 mt-5 bg-body rounded">
-                    <div className="row">
-                        <div className="col-sm-3 mt-5 mb-4 text-gred">
-                            <div className="search">
-                                {/* Replaced text input with dropdown for group name filter */}
-                                <select
-                                    className="form-select"
-                                    aria-label="Default select example"
-                                    value={filterValue}
-                                    onChange={(e) => setFilterValue(e.target.value)}
-                                >
-                                    {/* Add a default disabled option without value */}
-                                    <option value="" disabled hidden>
-                                        Filter by Group Name
-                                    </option>
-                                    {/* Add options dynamically based on group names */}
-                                    {teacherGroups.map((group) => (
-                                        <option key={group.id} value={group.name}>
-                                            {group.name}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-                        <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred" style={{ color: 'green' }}>
-                            <h2>
-                                <b>Groups Details</b>
-                            </h2>
-                        </div>
-                        {/* Removed "Add New Group" button */}
-                    </div>
-                    <div className="row">
-                        <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil' }}>
-                            <Table striped bordered hover responsive className="mt-4 text-center">
-                                <thead>
-                                    <tr>
-                                        <th>Group ID</th>
-                                        <th>Group Name</th>
-                                        <th>Number of Students</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {/* Map through the teacherGroups state and display each group */}
-                                    {teacherGroups.map((group) => (
-                                        <tr key={group.id}>
-                                            <td>{group.id}</td>
-                                            <td>{group.name}</td>
-                                            <td>{group.numberOfStudents}</td>
-                                            <td>
-                                                {/* Replaced "View" link with a button */}
-                                                <Button variant="info" className="me-2">
-                                                    View
-                                                </Button>
-                                                <Link to={`/editGroup/${group.id}`}>
-                                                    {/* "Edit" link remains as a button */}
-                                                    {/* <Button variant="success" className="ms-2">
+        </div>
+      </nav>
+      <div className="container">
+        <div className="crud shadow-lg p-3 mb-5 mt-5 bg-body rounded">
+          <div className="row">
+            <div className="col-sm-3 mt-5 mb-4 text-gred">
+              <div className="search">
+                {/* Replaced text input with dropdown for group name filter */}
+                <select
+                  className="form-select"
+                  aria-label="Default select example"
+                  value={filterValue}
+                  onChange={(e) => setFilterValue(e.target.value)}
+                >
+                  {/* Add a default disabled option without value */}
+                  <option value="" disabled hidden>
+                    Filter by Group Name
+                  </option>
+                  {/* Add options dynamically based on group names */}
+                  {teacherGroups.map((group) => (
+                    <option key={group.id} value={group.name}>
+                      {group.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="col-sm-3 offset-sm-2 mt-5 mb-4 text-gred" style={{ color: 'green' }}>
+              <h2>
+                <b>Groups Details</b>
+              </h2>
+            </div>
+            {/* Removed "Add New Group" button */}
+          </div>
+          <div className="row">
+            <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil' }}>
+              <Table striped bordered hover responsive className="mt-4 text-center">
+                <thead>
+                  <tr>
+                    <th>Group ID</th>
+                    <th>Group Name</th>
+                    <th>Number of Students</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Map through the teacherGroups state and display each group */}
+                  {teacherGroups.map((group) => (
+                    <tr key={group.id}>
+                      <td>{group.id}</td>
+                      <td>{group.name}</td>
+                      <td>{group.numberOfStudents}</td>
+                      <td>
+                        {/* Replaced "View" link with a button */}
+                        <Button variant="info" className="me-2">
+                          View
+                        </Button>
+                        <Link to={`/editGroup/${group.id}`}>
+                          {/* "Edit" link remains as a button */}
+                          {/* <Button variant="success" className="ms-2">
                                                         Edit
                                                     </Button> */}
-                                                </Link>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </Table>
-                        </div>
-                    </div>
-
-                    {/* Modal Box */}
-                    <div className="model_box">
-                        <Modal
-                            show={show}
-                            onHide={handleClose}
-                            backdrop="static"
-                            keyboard={false}
-                            style={{ marginTop: '90px', fontFamily: 'Allerta Stencil', width: '100%', height: '100%' }}
-                        >
-                            <Modal.Header closeButton style={{ background: '#33b5e5' }}>
-                                <Modal.Title>Add Group</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body style={{ background: '#e3f2fd' }}>
-                                {/* Form for adding a new group */}
-                                <form>
-                                    <div className="form-group">
-                                        <label htmlFor="groupName">Group Name:</label>
-                                        <input type="text" className="form-control" id="groupName" placeholder="Enter Group Name" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="numberOfStudents">Number of Students:</label>
-                                        <input
-                                            type="number"
-                                            className="form-control"
-                                            id="numberOfStudents"
-                                            placeholder="Enter Number of Students"
-                                        />
-                                    </div>
-                                    <button type="submit" className="btn btn-success mt-4">
-                                        Add Group
-                                    </button>
-                                </form>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </div>
-                </div>
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
             </div>
+          </div>
+
+          {/* Modal Box */}
+          <div className="model_box">
+            <Modal
+              show={show}
+              onHide={handleClose}
+              backdrop="static"
+              keyboard={false}
+              style={{ marginTop: '90px', fontFamily: 'Allerta Stencil', width: '100%', height: '100%' }}
+            >
+              <Modal.Header closeButton style={{ background: '#33b5e5' }}>
+                <Modal.Title>Add Group</Modal.Title>
+              </Modal.Header>
+              <Modal.Body style={{ background: '#e3f2fd' }}>
+                {/* Form for adding a new group */}
+                <form>
+                  <div className="form-group">
+                    <label htmlFor="groupName">Group Name:</label>
+                    <input type="text" className="form-control" id="groupName" placeholder="Enter Group Name" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="numberOfStudents">Number of Students:</label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      id="numberOfStudents"
+                      placeholder="Enter Number of Students"
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-success mt-4">
+                    Add Group
+                  </button>
+                </form>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ManageGroupComponent;

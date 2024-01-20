@@ -188,21 +188,21 @@ const CreatStudentComponent = () => {
                     <div className="nav-container">
                         {/* Logo and Home link */}
                         <NavLink exact to="/" className="nav-logo">
-          <NavLink exact to="/LibrarianHomepage" className="nav-logo">
-    <img
-        src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
-        alt="logo"
-        width="50"
-        style={{
-            padding: '1px',
-            marginTop: '16px',
-            width: '100px',
-            height: '220px',
-        }}
-    />
-</NavLink>
+                            <NavLink exact to="/LibrarianHomepage" className="nav-logo">
+                                <img
+                                    src="https://fsx1.itstep.org/api/v1/files/-bRZCFuPESE9skZZlyP75n4dL9uFnEpm"
+                                    alt="logo"
+                                    width="50"
+                                    style={{
+                                        padding: '1px',
+                                        marginTop: '10px',
+                                        width: '100px',
+                                        height: '220px',
+                                    }}
+                                />
+                            </NavLink>
 
-          </NavLink>
+                        </NavLink>
 
                         {/* Navigation links */}
                         <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -239,7 +239,7 @@ const CreatStudentComponent = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/manage-studentgroup"
+                                    to="/ManageStudentGroup"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
@@ -249,7 +249,7 @@ const CreatStudentComponent = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/manage-groups"
+                                    to="/ManagementGroups"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
@@ -258,27 +258,27 @@ const CreatStudentComponent = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
+              <NavLink
+                to="/Resetpassword"
+                activeclassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Reset Password
+              </NavLink>
+            </li>
+                            <li className="nav-item">
                                 <NavLink
-                                    to="/reset-password"
+
+                                    to="/LoginLibrarian"
                                     activeclassName="active"
                                     className="nav-links"
                                     onClick={handleClick}
+
                                 >
-                                    Reset Password
+                                    Log out
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
-                  <NavLink
-  
-                      to="/LoginLibrarian"
-                      activeclassName="active"
-                      className="nav-links"
-                      onClick={handleClick}
-  
-                  >
-                      Log out
-                  </NavLink>
-              </li>
                             {/* Add more navigation items as needed */}
                         </ul>
 
@@ -363,8 +363,8 @@ const CreatStudentComponent = () => {
                                 </div>
                             </div>
 
-                        {/* Modal Box for adding new teacher */}
-                        <Modal
+                            {/* Modal Box for adding new teacher */}
+                            <Modal
                                 show={show}
                                 onHide={handleClose}
                                 backdrop="static"
@@ -372,45 +372,45 @@ const CreatStudentComponent = () => {
                                 dialogClassName="modal-90w"
                                 style={{ fontFamily: 'Allerta Stencil' }}
                             >
-                            <Modal.Header closeButton style={{ background: "#33b5e5" }}>
-                                <Modal.Title>Add Student</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body style={{ background: "#e3f2fd" }}>
-                                <Container>
-                                    <Row>
-                                        <Col sm={6}>
-                                            {/* Form for adding new student */}
-                                            <form onSubmit={handleStudentSubmit}>
-                                                <div className="form-group">
-                                                    <label htmlFor="studentName">Name:</label>
-                                                    <input type="text" className="form-control" id="studentName" placeholder="Enter Name" value={studentName} onChange={(e) => setStudentName(e.target.value)} required />
-                                                </div>
-                                                <div className="form-group">
-                                                    <label htmlFor="studentRollNumber">Roll Number:</label>
-                                                    <input type="text" className="form-control" id="studentRollNumber" placeholder="Enter Roll Number" value={studentRollNumber} onChange={(e) => setStudentRollNumber(e.target.value)} required />
-                                                </div>
-                                                <button type="submit" className="btn btn-success mt-4">
-                                                    Add Student
-                                                </button>
-                                            </form>
-                                        </Col>
-                                    </Row>
-                                </Container>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
+                                <Modal.Header closeButton style={{ background: "#33b5e5" }}>
+                                    <Modal.Title>Add Student</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body style={{ background: "#e3f2fd" }}>
+                                    <Container>
+                                        <Row>
+                                            <Col sm={6}>
+                                                {/* Form for adding new student */}
+                                                <form onSubmit={handleStudentSubmit}>
+                                                    <div className="form-group">
+                                                        <label htmlFor="studentName">Name:</label>
+                                                        <input type="text" className="form-control" id="studentName" placeholder="Enter Name" value={studentName} onChange={(e) => setStudentName(e.target.value)} required />
+                                                    </div>
+                                                    <div className="form-group">
+                                                        <label htmlFor="studentRollNumber">Roll Number:</label>
+                                                        <input type="text" className="form-control" id="studentRollNumber" placeholder="Enter Roll Number" value={studentRollNumber} onChange={(e) => setStudentRollNumber(e.target.value)} required />
+                                                    </div>
+                                                    <button type="submit" className="btn btn-success mt-4">
+                                                        Add Student
+                                                    </button>
+                                                </form>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
     );
 }
 
-export default CreatStudentComponent    ;
+export default CreatStudentComponent;

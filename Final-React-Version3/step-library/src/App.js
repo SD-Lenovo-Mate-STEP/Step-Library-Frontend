@@ -10,7 +10,9 @@ import SignupComponent from './Components/LibrarianPages/Signup';
 import LibrarianHomepageComponent from './Components/LibrarianPages/LibrarianHomepage';
 import CreateTeacherComponent from './Components/LibrarianPages/CreateTeacher';
 import CreatStudentComponent from './Components/LibrarianPages/CreateStudents.';
-
+import ManageStudentGroupComponent from './Components/LibrarianPages/ManageStudentGroup';
+import ManageGroupsComponent from './Components/LibrarianPages/ManagementGroups';
+import ResetPasswordComponent from './Components/LibrarianPages/Resetpassword';
 
 const App = () => {
   return (
@@ -18,7 +20,7 @@ const App = () => {
       <div className="App">
         <Routes>
           {/* Teacher Pages */}
-          {/* Teacher Pages */}
+        
 
           <Route path="/" element={<LoginTeacher />} />
           <Route path="/LoginTeacher" element={<LoginTeacher />} />
@@ -33,6 +35,9 @@ const App = () => {
           <Route path="/LibrarianHomepage" element={<LibrarianHomepageComponent />} />
           <Route path="/CreateTeacher" element={<CreateTeacherComponent />} />
           <Route path="/CreateStudents" element={<CreatStudentComponent />} />
+          <Route path="/ManageStudentGroup" element={<ManageStudentGroupComponent />} />
+          <Route path="/ManagementGroups" element={<ManageGroupsComponent />} />
+          <Route path="/Resetpassword" element={<ResetPasswordComponent />} />
 
         </Routes>
       </div>
