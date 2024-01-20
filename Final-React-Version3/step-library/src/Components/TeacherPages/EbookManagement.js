@@ -168,6 +168,8 @@ const EbookManageComponent = ({ groupId }) => {
                           opacity: 1;
                           transition: all 0.5s ease;
                         }
+
+                
                       
                         .nav-menu.active {
                           background: #1f5156;
@@ -342,8 +344,8 @@ const EbookManageComponent = ({ groupId }) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil' }}>
-                            <Table striped bordered hover responsive className="mt-4 text-center">
+                    <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil', maxHeight: '400px', overflowY: 'auto', overflowX: 'auto' }}>
+  <Table striped bordered hover responsive className="mt-4 text-center" style={{ minWidth: '600px' }}>
                                 <thead>
                                     <tr>
                                         <th>Ebook ID</th>

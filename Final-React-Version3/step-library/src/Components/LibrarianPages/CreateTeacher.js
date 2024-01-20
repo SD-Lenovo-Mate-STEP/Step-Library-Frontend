@@ -320,58 +320,54 @@ const CreateTeacherComponent = () => {
                         </div>
                         <div className="row">
 
-                            <div className="table-responsive" style={{ fontFamily: "Allerta Stencil" }}>
+                        <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil', maxHeight: '400px', overflowY: 'auto', overflowX: 'auto' }}>
+  <Table striped bordered hover responsive className="mt-4 text-center" style={{ minWidth: '600px' }}>
+                                    {/* Your table header remains unchanged */}
+                                    <thead>
+                                        <tr>
+                                            <th>Teacher ID</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
+                                            <th>Assign Group</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Yeow</td>
+                                            <td>********</td>
+                                            <td>
+                                                {/* Dropdown for Assign Teacher */}
+                                                <Form.Select>
+                                                    <option>Choose group...</option>
+                                                    {/* Add options dynamically based on your data or static values */}
+                                                    <option value="FT SD E3">FT-SD-E3</option>
+                                                    <option value="FT SD M2">FT-SD-M2</option>
+                                                    {/* Add more options as needed */}
+                                                </Form.Select>
+                                            </td>
+                                            <td>
+                                                <Button variant="success" className="me-2">
+                                                    Add
+                                                </Button>
+                                                {/* View button */}
+                                                <Button variant="primary" className="me-2">
+                                                    View
+                                                </Button>
+                                                <Button variant="danger">
+                                                    Delete
+                                                </Button>
+                                                <Button variant="success" className="ms-2">
+                                                    Edit
+                                                </Button>
+                                            </td>
+                                        </tr>
+                                        {/* Add more rows based on your actual data */}
+                                    </tbody>
 
-                                <div className="scrollable-table">
+                                </Table>
 
-
-                                    <Table striped bordered hover responsive className="mt-4 text-center">
-                                        {/* Your table header remains unchanged */}
-                                        <thead>
-                                            <tr>
-                                                <th>Teacher ID</th>
-                                                <th>Username</th>
-                                                <th>Password</th>
-                                                <th>Assign Group</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Yeow</td>
-                                                <td>********</td>
-                                                <td>
-                                                    {/* Dropdown for Assign Teacher */}
-                                                    <Form.Select>
-                                                        <option>Choose group...</option>
-                                                        {/* Add options dynamically based on your data or static values */}
-                                                        <option value="FT SD E3">FT-SD-E3</option>
-                                                        <option value="FT SD M2">FT-SD-M2</option>
-                                                        {/* Add more options as needed */}
-                                                    </Form.Select>
-                                                </td>
-                                                <td>
-                                                    <Button variant="success" className="me-2">
-                                                        Add
-                                                    </Button>
-                                                    {/* View button */}
-                                                    <Button variant="primary" className="me-2">
-                                                        View
-                                                    </Button>
-                                                    <Button variant="danger">
-                                                        Delete
-                                                    </Button>
-                                                    <Button variant="success" className="ms-2">
-                                                        Edit
-                                                    </Button>
-                                                </td>
-                                            </tr>
-                                            {/* Add more rows based on your actual data */}
-                                        </tbody>
-
-                                    </Table>
-                                </div>
                             </div>
                         </div>
 

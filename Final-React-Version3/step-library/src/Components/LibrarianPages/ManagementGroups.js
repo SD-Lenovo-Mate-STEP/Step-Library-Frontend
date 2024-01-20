@@ -355,8 +355,8 @@ const ManageGroupsComponent = () => {
           </div>
 
           <div className="row">
-            <div className="table-responsive" style={{ fontFamily: "Allerta Stencil", maxHeight: "500px", overflowY: "auto" }}>
-              <Table striped bordered hover responsive className="mt-4 text-center">
+          <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil' }}>
+  <Table striped bordered hover responsive className="mt-4 text-center" style={{ minWidth: '600px' }}>
                 <thead>
                   <tr>
                     <th>Group ID</th>

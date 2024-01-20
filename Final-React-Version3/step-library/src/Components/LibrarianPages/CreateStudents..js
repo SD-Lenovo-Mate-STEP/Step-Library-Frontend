@@ -7,6 +7,17 @@ import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 const CreatStudentComponent = () => {
     const [click, setClick] = useState(false);
     const [show, setShow] = useState(false);
+    const students = [
+        { id: 1, name: 'John Doe', rollNumber: '12345', group: 'FT SD E3' },
+        { id: 2, name: 'Jane Doe', rollNumber: '12346', group: 'FT SD E3' },
+        { id: 3, name: 'John Smith', rollNumber: '12347', group: 'FT SD E3' },
+        { id: 4, name: 'Jane Smith', rollNumber: '12348', group: 'FT SD E3' },
+        { id: 5, name: 'John Doe', rollNumber: '12345', group: 'FT SD E3' },
+        { id: 6, name: 'Jane Doe', rollNumber: '12346', group: 'FT SD E3' },
+        { id: 7, name: 'John Smith', rollNumber: '12347', group: 'FT SD E3' },
+        // Add more student objects here
+    ];
+
 
     const [studentName, setStudentName] = useState("");
     const [studentRollNumber, setStudentRollNumber] = useState("");
@@ -258,15 +269,15 @@ const CreatStudentComponent = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-              <NavLink
-                to="/Resetpassword"
-                activeclassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Reset Password
-              </NavLink>
-            </li>
+                                <NavLink
+                                    to="/Resetpassword"
+                                    activeclassName="active"
+                                    className="nav-links"
+                                    onClick={handleClick}
+                                >
+                                    Reset Password
+                                </NavLink>
+                            </li>
                             <li className="nav-item">
                                 <NavLink
 
@@ -316,8 +327,8 @@ const CreatStudentComponent = () => {
                         </div>
                         <div className="row">
                             <div className="row">
-                                <div className="table-responsive" style={{ fontFamily: "Allerta Stencil", maxHeight: "500px", overflowY: "auto" }}>
-                                    <Table striped bordered hover responsive className="mt-4 text-center">
+                                <div className="table-responsive" style={{ fontFamily: 'Allerta Stencil', maxHeight: '400px', overflowY: 'auto', overflowX: 'auto' }}>
+                                    <Table striped bordered hover responsive className="mt-4 text-center" style={{ minWidth: '600px' }}>
                                         <thead>
                                             <tr>
                                                 <th>Student ID</th>
@@ -328,36 +339,35 @@ const CreatStudentComponent = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John Doe</td>
-                                                <td>12345</td>
-                                                <td>
-                                                    {/* Dropdown for Assign Student */}
-                                                    <Form.Select>
-                                                        <option>Choose group...</option>
-                                                        {/* Add options dynamically based on your data or static values */}
-                                                        <option value="FT SD E3">FT-SD-E3</option>
-                                                        <option value="FT SD M2">FT-SD-M2</option>
-                                                    </Form.Select>
-                                                </td>
-                                                <td>
-                                                    {/* Action buttons */}
-                                                    <Button variant="success" className="me-2">
-                                                        Add
-                                                    </Button>
-                                                    <Button variant="primary" className="me-2">
-                                                        View
-                                                    </Button>
-                                                    <Button variant="danger">
-                                                        Delete
-                                                    </Button>
-                                                    <Button variant="success" className="ms-2">
-                                                        Edit
-                                                    </Button>
-                                                </td>
-                                            </tr>
-                                            {/* Add more rows based on your actual data */}
+                                            {students.map((student) => (
+                                                <tr key={student.id}>
+                                                    <td>{student.id}</td>
+                                                    <td>{student.name}</td>
+                                                    <td>{student.rollNumber}</td>
+                                                    <td>
+                                                        <Form.Select>
+                                                            <option>Choose group...</option>
+                                                            {/* Add options dynamically based on your data or static values */}
+                                                            <option value="FT SD E3">FT-SD-E3</option>
+                                                            <option value="FT SD M2">FT-SD-M2</option>
+                                                        </Form.Select>
+                                                    </td>
+                                                    <td>
+                                                        <Button variant="success" className="me-2">
+                                                            Add
+                                                        </Button>
+                                                        <Button variant="primary" className="me-2">
+                                                            View
+                                                        </Button>
+                                                        <Button variant="danger">
+                                                            Delete
+                                                        </Button>
+                                                        <Button variant="success" className="ms-2">
+                                                            Edit
+                                                        </Button>
+                                                    </td>
+                                                </tr>
+                                            ))}
                                         </tbody>
                                     </Table>
                                 </div>
