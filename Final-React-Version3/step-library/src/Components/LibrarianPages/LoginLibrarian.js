@@ -25,7 +25,7 @@ const LoginLibrarianComponent = () => {
 
     if (data.username.length > 0 && data.password.length > 0) {
       try {
-        fetch(`https://localhost:44388/api/Librarians/${data.username}/${data.password}/login`,{
+        fetch(`https://localhost:44343/api/Librarians/${data.username}/${data.password}/login`,{
           method: 'POST'
         }).then((resp) => resp.json()).then((data) => {
           // console.log(data, " Fetch Successfully");
@@ -35,6 +35,8 @@ const LoginLibrarianComponent = () => {
               text: 'Login Successfully.',
               icon: 'success',
             });
+            const response = JSON.stringify(data)
+            localStorage.setItem('user_logined', response);
             navigate('/LibrarianHomepage');
           }else{
             Swal.fire({

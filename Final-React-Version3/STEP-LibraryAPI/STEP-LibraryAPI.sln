@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34414.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STEP-LibraryAPI", "STEP-LibraryAPI\STEP-LibraryAPI.csproj", "{D602C046-3977-4B31-A771-46F7AE3BFCB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D602C046-3977-4B31-A771-46F7AE3BFCB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D602C046-3977-4B31-A771-46F7AE3BFCB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D602C046-3977-4B31-A771-46F7AE3BFCB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D602C046-3977-4B31-A771-46F7AE3BFCB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4953CD4-33E7-4443-A7C0-572C47981230}
+	EndGlobalSection
+EndGlobal

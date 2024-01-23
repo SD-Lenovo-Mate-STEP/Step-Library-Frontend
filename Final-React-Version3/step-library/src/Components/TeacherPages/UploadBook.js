@@ -8,7 +8,8 @@ import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 
 const UploadBookComponent = () => {
-
+  const loginedData = JSON.parse(localStorage.getItem('user_logined'));
+  const token = loginedData.token;
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -35,6 +36,21 @@ const UploadBookComponent = () => {
 
   const handleClick = () => setClick(!click);
 
+  function loadBooks(){
+    try{
+      fetch(`https://localhost:44343/api/Books`,{
+          method: 'GET',
+          headers: {
+              Authorization : `Bearer ${token}`
+          }
+        }).then((resp) => resp.json()).then((data) => {
+          console.log(data);
+          return data;
+        })
+    }catch(err){
+
+    }
+  }
   return (
     <div className='App'>
       <style>
@@ -344,8 +360,9 @@ const UploadBookComponent = () => {
               <Table striped bordered hover responsive className="mt-4 text-center" style={{ minWidth: '600px' }}>
                 <thead>
                   <tr>
-                    <th>Book ID</th>
+                    <th>ID</th>
                     <th>Book Title</th>
+                    <th>Book Author</th>
                     <th>Book Cover</th>
                     <th>Book Path</th>
                     <th>Action</th>
@@ -356,6 +373,7 @@ const UploadBookComponent = () => {
                   <tr>
                     <td>1</td>
                     <td>Book 1</td>
+                    <td>Yeow</td>
                     <td>
                       <img
                         src="https://images-na.ssl-images-amazon.com/images/I/611X8GI7hpL._AC_UL127_SR127,127_.jpg"
@@ -365,7 +383,7 @@ const UploadBookComponent = () => {
                     </td>
                     <td>/path/to/book1</td>
                     <td>
-                      <Button variant="info" className="me-2" >
+                      <Button variant="info" className="me-2" onClick={loadBooks}>
                         View
                       </Button>
                       <Button variant="danger">
@@ -427,12 +445,19 @@ const UploadBookComponent = () => {
                           <label htmlFor="bookTitle">Book Title:</label>
                           <input type="text" className="form-control" id="bookTitle" placeholder="Enter Book Title" />
                         </div>
-
+                        <div className="form-group">
+                          <label htmlFor="bookAuthor">Book Author:</label>
+                          <input type="text" className="form-control" id="bookAuthor" placeholder="Enter Author Name" />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="bookPage">Book Pages:</label>
+                          <input type="text" className="form-control" id="bookPage" placeholder="Enter Book Page" />
+                        </div>
                         <div className="form-group">
                           <label htmlFor="bookPath">Book Path (PDF):</label>
                           <input type="file" accept=".pdf" className="form-control" id="bookPath" />
                         </div>
-                        <button type="submit" className="btn btn-success mt-4">
+                        <button type="button" className="btn btn-success mt-4">
                           Add Record
                         </button>
                       </form>

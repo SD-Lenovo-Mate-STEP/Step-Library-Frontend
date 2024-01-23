@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\controllers\\librarianscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\controllers\\librarianscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\models\\userbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\models\\userbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\models\\bookbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\models\\bookbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|c:\\virtual drived\\study material\\step\\subjects\\exam asp.net and react\\step_e-libraryapi\\step_e-libraryapi\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4996ECD1-251C-44D5-9405-E64EDA11859C}|STEP_E-LibraryAPI\\STEP_E-LibraryAPI.csproj|solutionrelative:step_e-libraryapi\\models\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 219,
+          "SelectedChildIndex": 15,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2120393177:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:363299993:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:766256768:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Program.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Program.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Program.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAjwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T14:03:37.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserBinding.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\UserBinding.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Models\\UserBinding.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\UserBinding.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Models\\UserBinding.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T12:29:04.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibrariansController.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\LibrariansController.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Controllers\\LibrariansController.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\LibrariansController.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Controllers\\LibrariansController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAHMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:17:38.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Controllers\\BooksController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:17:34.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Models\\Book.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\Book.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Models\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:17:26.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookBinding.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\BookBinding.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Models\\BookBinding.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\BookBinding.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Models\\BookBinding.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:17:22.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Group.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\Group.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Models\\Group.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\Group.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Models\\Group.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:04:50.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Models\\User.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Models\\User.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Models\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:04:50.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "STEP_E-LibraryAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Virtual DriveD\\Study Material\\STEP\\Subjects\\Exam ASP.Net and React\\STEP_E-LibraryAPI\\STEP_E-LibraryAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "STEP_E-LibraryAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAuwEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-20T07:04:49.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

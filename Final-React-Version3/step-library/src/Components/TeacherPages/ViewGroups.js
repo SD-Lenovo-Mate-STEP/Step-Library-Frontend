@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 const ManageGroupComponent = () => {
+  const loginedData = JSON.parse(localStorage.getItem('user_logined'));
+  const token = loginedData.token;
   const [show, setShow] = useState(false);
   const [teacherGroups, setTeacherGroups] = useState([
     { id: 1, name: 'FT-SD-A3', numberOfStudents: 25 },
@@ -20,6 +22,20 @@ const ManageGroupComponent = () => {
 
   const handleClick = () => setClick(!click);
 
+  function loadGroups(){
+    try{
+        fetch(`https://localhost:44343/api/Groups`,{
+            method: 'GET',
+            headers: {
+                Authorization : `Bearer ${token}`
+            }
+          }).then((resp) => resp.json()).then((data) => {
+            console.log(data);
+          })
+    }catch(err){
+
+    }
+  } 
   return (
     <div className='App'>
       <style>
@@ -357,7 +373,7 @@ const ManageGroupComponent = () => {
                       <td>{group.numberOfStudents}</td>
                       <td>
                         {/* Replaced "View" link with a button */}
-                        <Button variant="info" className="me-2">
+                        <Button variant="info" className="me-2" onClick={loadGroups}>
                           View
                         </Button>
                         <Link to={`/editGroup/${group.id}`}>

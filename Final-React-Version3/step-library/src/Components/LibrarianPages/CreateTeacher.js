@@ -5,11 +5,15 @@ import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 
 const CreateTeacherComponent = () => {
+    const loginedData = JSON.parse(localStorage.getItem('user_logined'));
+    const token = loginedData.token;
     const [click, setClick] = useState(false);
     const [show, setShow] = useState(false);
 
     const [teacherUsername, setTeacherUsername] = useState("");
     const [teacherPassword, setTeacherPassword] = useState("");
+    const [teacherConfirmPassword, setTeacherConfirmPassword] = useState("");
+
 
     const handleClick = () => setClick(!click);
     const handleClose = () => setShow(false);
@@ -22,6 +26,45 @@ const CreateTeacherComponent = () => {
         // Add logic to send data to backend or perform necessary actions
         handleClose(); // Close the modal after submission
     };
+
+    const register = {
+        'username': teacherUsername,
+        'password': teacherPassword,
+        'confirm_Password': teacherConfirmPassword,
+    }
+
+    async function loadGroups(){
+        try{
+            fetch(`https://localhost:44343/api/Users`,{
+                method: 'GET',
+                headers: {
+                    Authorization : `Bearer ${token}`
+                }
+              }).then((resp) => resp.json()).then((data) => {
+                console.log(data);
+                return data;
+              })
+        }catch(err){
+
+        }
+    }
+
+    // async function addTeachers(){
+    //     loadGroups();
+    //     try{
+    //         fetch(`https://localhost:44343/api/Users`,{
+    //             method: 'GET',
+    //             headers: {
+    //                 Authorization : `Bearer ${token}`
+    //             },
+    //             body: JSON.stringify(register)
+    //           }).then((resp) => resp.json()).then((data) => {
+    //             console.log(data);
+    //           })
+    //     }catch(err){
+
+    //     }
+    // }
 
 
     return (
@@ -348,11 +391,11 @@ const CreateTeacherComponent = () => {
                                                 </Form.Select>
                                             </td>
                                             <td>
-                                                <Button variant="success" className="me-2">
+                                                <Button variant="success" className="me-2" onClick={addTeachers}>
                                                     Add
                                                 </Button>
                                                 {/* View button */}
-                                                <Button variant="primary" className="me-2">
+                                                <Button variant="primary" className="me-2" onClick={loadGroups}>
                                                     View
                                                 </Button>
                                                 <Button variant="danger">
@@ -380,7 +423,7 @@ const CreateTeacherComponent = () => {
                                 <Container>
                                     <Row>
                                         <Col sm={6}>
-                                            <form onSubmit={handleTeacherSubmit}>
+                                            <form onSubmit={addTeachers}>
                                                 <div className="form-group">
                                                     <label htmlFor="teacherUsername">Username:</label>
                                                     <input type="text" className="form-control" id="teacherUsername" placeholder="Enter Username" value={teacherUsername} onChange={(e) => setTeacherUsername(e.target.value)} required />
@@ -388,6 +431,10 @@ const CreateTeacherComponent = () => {
                                                 <div className="form-group">
                                                     <label htmlFor="teacherPassword">Password:</label>
                                                     <input type="password" className="form-control" id="teacherPassword" placeholder="Enter Password" value={teacherPassword} onChange={(e) => setTeacherPassword(e.target.value)} required />
+                                                </div>
+                                                <div className="form-group">
+                                                    <label htmlFor="teacherPassword">Confirm Password:</label>
+                                                    <input type="confirm_Password" className="form-control" id="teacherConfirmPassword" placeholder="Enter Password" value={teacherConfirmPassword} onChange={(e) => setTeacherConfirmPassword(e.target.value)} required />
                                                 </div>
                                                 <button type="submit" className="btn btn-success mt-4">
                                                     Add Teacher

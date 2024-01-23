@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\STEP-LibraryAPI.props" />
+</Project>

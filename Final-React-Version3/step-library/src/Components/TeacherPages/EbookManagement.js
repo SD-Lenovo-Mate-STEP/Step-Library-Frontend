@@ -7,7 +7,9 @@ import { NavLink } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 
 const EbookManageComponent = ({ groupId }) => {
-
+  const loginedData = JSON.parse(localStorage.getItem('user_logined'));
+  const token = loginedData.token;
+  const userGroupID = loginedData.groupID;
     const [show, setShow] = useState(false);
     const [ebooks, setEbooks] = useState([
         { id: 1, title: 'Book 1', author: 'Author 1', group: 'Group A' },
@@ -46,7 +48,43 @@ const EbookManageComponent = ({ groupId }) => {
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
+
+    function loadBooks(){
+      try{
+          fetch(`https://localhost:44343/api/Book`,{
+              method: 'GET',
+              headers: {
+                  Authorization : `Bearer ${token}`
+              }
+            }).then((resp) => resp.json()).then((data) => {
+              console.log(data);
+            })
+      }catch(err){
   
+      }
+    }
+
+    // var matchedData = [];
+    // function loadGroupMatchUser(){
+    //   try{
+    //       fetch(`https://localhost:44343/api/Groups`,{
+    //           method: 'GET',
+    //           headers: {
+    //               Authorization : `Bearer ${token}`
+    //           }
+    //         }).then((resp) => resp.json()).then((data) => {
+    //           for (let index = 0; index < data.length; index++) {
+    //             if(data.id === userGroupID){
+    //               matchedData = data.name;
+    //             }
+    //           }
+    //         })
+    //         console.log(matchedData)
+    //   }catch(err){
+  
+    //   }
+    // }
+
       return (
           <div className='App'>
           <style>
@@ -396,7 +434,7 @@ const EbookManageComponent = ({ groupId }) => {
                                             </td>
                                             <td>
                                                 {/* Button for add */}
-                                                <Button variant="success" className="me-2">
+                                                <Button variant="success" className="me-2" onClick={loadGroupMatchUser}>
                                                     Add
                                                 </Button>
 

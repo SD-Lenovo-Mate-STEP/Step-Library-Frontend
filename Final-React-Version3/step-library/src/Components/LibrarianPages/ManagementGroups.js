@@ -6,16 +6,13 @@ import ManagementGroups from "./ManagementGroups"; // Make sure to import the Ma
 import Swal from 'sweetalert2';
 
 const ManageGroupsComponent = () => {
-
+  const loginedData = JSON.parse(localStorage.getItem('user_logined'));
+  const token = loginedData.token;
 
   const handleClick = () => setClick(!click);
   const [click, setClick] = useState(false);
   const [show, setShow] = useState(false);
   const [groupTitle, setGroupTitle] = useState('');
-
-
-
-
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -24,40 +21,64 @@ const ManageGroupsComponent = () => {
 
   // ... (your existing code)
 
-  const handleGroupSubmit = (e) => {
-    e.preventDefault();
-    if (groupList.some((group) => group.title === groupTitle)) {
-      // If the group title already exists, show an error message using SweetAlert
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Group with the same name already exists!',
-      });
-    } else {
-      // If the group title is unique, proceed with group creation logic
-      const newGroup = {
-        id: groupList.length + 1,
-        title: groupTitle,
-      };
+  // const createGroups = (e) => {
+  //   e.preventDefault();
+  //         // If the group title is unique, proceed with group creation logic
+  //         const newGroup = {
+  //           id: groupList.length + 1,
+  //           title: groupTitle,
+  //         };
+  //   try{
+  //     fetch(`https://localhost:44343/api/Groups`,{
+  //         method: 'POST',
+  //         headers: {
+  //             Authorization : `Bearer ${token}`
+  //         },
+  //         body: JSON.stringify(newGroup)
+  //       }).then((resp) => resp.json()).then((data) => {
+  //         console.log(data);
+  //       if (groupList.some((group) => group.title === groupTitle)) {
+  //         // If the group title already exists, show an error message using SweetAlert
+  //         Swal.fire({
+  //           icon: 'error',
+  //           title: 'Error',
+  //           text: 'Group with the same name already exists!',
+  //         });
+  //       } else {
 
-      setGroupList([...groupList, newGroup]);
-      setGroupTitle(''); // Clear the groupTitle field after submitting
-      handleClose(); // Close the modal after submission
+  //         setGroupList([...groupList, newGroup]);
+  //         setGroupTitle(''); // Clear the groupTitle field after submitting
+  //         handleClose(); // Close the modal after submission
 
-      // Optionally, show a success message using SweetAlert
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Group created successfully!',
-      });
-    }
-  };
+  //         // Optionally, show a success message using SweetAlert
+  //         Swal.fire({
+  //           icon: 'success',
+  //           title: 'Success',
+  //           text: 'Group created successfully!',
+  //         });
+  //         }
+  //       })
+  //   }catch(err){
+  //     console.log(err, "Error Create")
+  //   }
+  // };
 
 
   // ... (your existing code)
+  function loadGroups(){
+    try{
+        fetch(`https://localhost:44343/api/Groups`,{
+            method: 'GET',
+            headers: {
+                Authorization : `Bearer ${token}`
+            }
+          }).then((resp) => resp.json()).then((data) => {
+            console.log(data);
+          })
+    }catch(err){
 
-
-
+    }
+  } 
 
   return (
     <div className='App'>
@@ -386,26 +407,23 @@ const ManageGroupsComponent = () => {
               </Table>
             </div>
           </div>
-
-
-
         </div>
 
         {/* Add new grouo modal */}
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} style={{ marginTop: '90px', fontFamily: 'Allerta Stencil', width: '100%', height: '100%' }}>
           <Modal.Header closeButton style={{ background: "#33b5e5" }}>
-            <Modal.Title>Add Group</Modal.Title>
+            <Modal.Title>Group</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Container>
               <Row>
                 <Col sm={6}>
-                  <form onSubmit={handleGroupSubmit}>
+                  <form>
                     <div className="form-group">
                       <label htmlFor="groupTitle">Group Name:</label>
-                      <input type="text" className="form-control" id="groupTitle" placeholder="Enter Group Name" value={groupTitle} onChange={(e) => setGroupTitle(e.target.value)} required />
+                      <input type="text" className="form-control" placeholder="Enter Group Name" value={groupTitle} onChange={(e) => setGroupTitle(e.target.value)} required />
                     </div>
-                    <button type="submit" className="btn btn-success mt-4">
+                    <button type="buttn" className="btn btn-success mt-4">
                       Create Group
                     </button>
                   </form>

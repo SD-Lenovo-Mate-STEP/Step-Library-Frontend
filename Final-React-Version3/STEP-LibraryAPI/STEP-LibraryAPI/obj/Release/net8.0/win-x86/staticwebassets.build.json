@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6NlTtiaQP0kONyjQhU6Lsn1CL88ppeQzCxAoMJp5yuk=",
+  "Source": "STEP-LibraryAPI",
+  "BasePath": "_content/STEP-LibraryAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
